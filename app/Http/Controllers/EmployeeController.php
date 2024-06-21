@@ -74,8 +74,14 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Employee $employee)
+    public function destroy($id)
     {
-        //
+        try {
+            $employee = Employee::find($id);
+            $employee->delete();
+            return redirect()->route('pegawai.index');
+        } catch (\Exception $e) {
+            return back()->with('error', 'Gagal menghapus data pegawai: ' . $e->getMessage());
+        }
     }
 }
