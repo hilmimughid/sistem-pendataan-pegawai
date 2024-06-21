@@ -23,10 +23,10 @@ class StoreEmployeeRequest extends FormRequest
     {
         return [
             'nama' => 'required|string|max:254',
-            'divisi' => 'required|in:Produksi, Keuangan, Marketing, IT, HR',
-            'jabatan' => 'required|in:Staff, Supervisor, Manager, Direktur',
-            'jenis_kelamin' => 'required|in:Laki-laki, Perempuan',
-            'no_hp' => 'required|string|min:10|max:15|unique:employees|regex:/^[0-9]{1,15}$/',
+            'divisi' => 'required|in:Produksi,Keuangan,Marketing,IT,HR',
+            'jabatan' => 'required|in:Staff, Supervisor,Manager,Direktur',
+            'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
+            'no_hp' => 'required|string|min:10|max:15|regex:/^[0-9]{1,15}$/|unique:employees',
             'email' => 'required|email|unique:employees',
             'alamat' => 'required|string|max:254',
         ];
