@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
 
     {{-- Favicon --}}
-    <link rel="shortcut icon" type="image" href="{{ asset('images/favicon.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}" />
 
-    {{-- CSS --}}
+    {{-- Bootstrap CSS --}}
     <link rel="stylesheet" href="{{ asset('libraries/bootstrap/css/bootstrap.css') }}" />
 </head>
 
@@ -45,8 +46,8 @@
         </div>
     </div>
 
-    {{-- JS --}}
-    <script src="{{ asset('libraries/bootstrap/js/bootstrap.js') }}"></script>
+    {{-- Bootstrap JS --}}
+    <script src="{{ asset('libraries/bootstrap/js/bootstrap.bundle.js') }}"></script>
 </body>
 
 </html>
