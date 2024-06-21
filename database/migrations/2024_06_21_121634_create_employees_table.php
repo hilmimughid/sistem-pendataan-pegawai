@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->enum('divisi', ['IT', 'HR', 'Marketing', 'Produksi']);
+            $table->enum('divisi', ['Produksi', 'Keuangan', 'Marketing', 'IT', 'HR']);
             $table->enum('jabatan', ['Staff', 'Supervisor', 'Manager', 'Direktur']);
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
             $table->string('no_hp')->unique();
