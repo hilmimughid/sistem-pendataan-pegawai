@@ -5,64 +5,40 @@
         <h1 class="text-center mb-5">Detail Data Pegawai</h1>
         <div class="card p-3">
             <div class="card-body">
-                <div class="row my-1">
-                    <div class="col-2">
-                        <b>Nama</b>
-                    </div>
-                    <div class="col-3">
-                        <p>: {{ $employee->nama }}</p>
-                    </div>
-                </div>
-                <div class="row my-1">
-                    <div class="col-2">
-                        <b>Divisi</b>
-                    </div>
-                    <div class="col-3">
-                        <p>: {{ $employee->divisi }}</p>
-                    </div>
-                </div>
-                <div class="row my-1">
-                    <div class="col-2">
-                        <b>Jabatan</b>
-                    </div>
-                    <div class="col-3">
-                        <p>: {{ $employee->jabatan }}</p>
-                    </div>
-                </div>
-                <div class="row my-1">
-                    <div class="col-2">
-                        <b>Jenis Kelamin</b>
-                    </div>
-                    <div class="col-3">
-                        <p>: {{ $employee->jenis_kelamin }}</p>
-                    </div>
-                </div>
-                <div class="row my-1">
-                    <div class="col-2">
-                        <b>No. HP</b>
-                    </div>
-                    <div class="col-3">
-                        <p>: {{ $employee->no_hp }}</p>
-                    </div>
-                </div>
-                <div class="row my-1">
-                    <div class="col-2">
-                        <b>Email</b>
-                    </div>
-                    <div class="col-3">
-                        <p>: {{ $employee->email }}</p>
-                    </div>
-                </div>
-                <div class="row my-1">
-                    <div class="col-2">
-                        <b>Alamat</b>
-                    </div>
-                    <div class="col-3">
-                        <p>: {{ $employee->alamat }}</p>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td class="col-2"><b>Nama</b></td>
+                            <td>: {{ $employee->nama }}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2"><b>Divisi</b></td>
+                            <td>: {{ $employee->divisi }}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2"><b>Jabatan</b></td>
+                            <td>: {{ $employee->jabatan }}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2"><b>Jenis Kelamin</b></td>
+                            <td>: {{ $employee->jenis_kelamin }}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2"><b>No. HP</b></td>
+                            <td>: {{ $employee->no_hp }}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2"><b>Email</b></td>
+                            <td>: {{ $employee->email }}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2"><b>Alamat</b></td>
+                            <td>: {{ $employee->alamat }}</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="text-center mt-3">
-                    <a class="btn btn-dark" href="{{ route('pegawai.index') }}"> Kembali</a>
+                    <a class="btn btn-secondary" href="{{ route('pegawai.index') }}"> Kembali</a>
                 </div>
             </div>
         </div>

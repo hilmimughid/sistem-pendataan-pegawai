@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Data Pegawai')
 @section('content')
-    <div class="container-fluid p-3">
+    <div class="m-3">
         <h1 class="text-center mb-5">Data Pegawai</h1>
         <div class="card p-3">
             <div class="card-body">
@@ -48,13 +48,38 @@
                                     </td>
                                     <td>
                                         {{-- Button Delete --}}
-                                        <form action="{{ route('pegawai.destroy', $employee->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">
-                                                <i class="fa-solid fa-trash"></i>
-                                            </button>
-                                        </form>
+                                        <button class="btn btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#update_pegawai_modal{{ $employee->id }}">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+
+                                        {{-- Modal Konfirmasi Hapus --}}
+                                        <div class="modal" tabindex="-1" id="update_pegawai_modal{{ $employee->id }}">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Peringatan!</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Konfirmasi menghapus data pegawai
+                                                            {{ $employee->nama }}
+                                                        </p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <form action="{{ route('pegawai.destroy', $employee->id) }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="button" class="btn btn-outline-secondary me-2"
+                                                                data-bs-dismiss="modal">Batal</button>
+                                                            <button type="submit" class="btn btn-danger">Yakin</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>

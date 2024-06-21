@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="text-end">
-                        <a class="btn btn-dark me-2" href="{{ route('pegawai.index') }}"> Batal</a>
+                        <a class="btn btn-outline-secondary me-2" href="{{ route('pegawai.index') }}"> Batal</a>
                         <button type="submit" class="btn btn-success">Simpan</button>
                     </div>
                 </form>
