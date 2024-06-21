@@ -1,10 +1,11 @@
-<div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+{{-- Sidebar --}}
+<div class="offcanvas-lg offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="sidebarMenuLabel">Pendataan Pegawai</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
             aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body d-md-flex flex-column pt-3 vh-sidebar">
+    <div class="offcanvas-body d-lg-flex flex-column pt-3 vh-sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-3 mx-3 mb-3 btn btn-primary" aria-current="page"

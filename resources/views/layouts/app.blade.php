@@ -34,7 +34,7 @@
             </div>
 
             {{-- Main Content --}}
-            <main class="col-md col-lg container">
+            <main class="col">
                 @yield('content')
             </main>
         </div>
