@@ -8,13 +8,14 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-3 mx-3 mb-3 btn btn-primary" aria-current="page"
-                    href="#">
+                    href="{{ route('dashboard.index') }}">
                     <i class="fa-solid fa-house"></i>
                     <b>Dashboard</b>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-3 mx-3 mb-3 btn btn-primary" href="#">
+                <a class="nav-link d-flex align-items-center gap-3 mx-3 mb-3 btn btn-primary"
+                    href="{{ route('pegawai.index') }}">
                     <i class="fa-solid fa-users"></i>
                     <b>Data Pegawai</b>
                 </a>
