@@ -17,8 +17,8 @@ return new class extends Migration
             $table->enum('divisi', ['Produksi', 'Keuangan', 'Marketing', 'IT', 'HR']);
             $table->enum('jabatan', ['Staff', 'Supervisor', 'Manager', 'Direktur']);
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
-            $table->string('no_hp')->unique();
-            $table->string('email')->unique();
+            $table->string('no_hp');
+            $table->string('email');
             $table->string('alamat');
             $table->timestamps();
         });
