@@ -1,5 +1,5 @@
-.vh-80 {
-    height: 79vh;
+.vh-sidebar {
+    height: calc(100vh - 154px);
 }
 
 @media (min-width: 768px) {
