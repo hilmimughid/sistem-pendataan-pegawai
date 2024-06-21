@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreEmployeeRequest;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 
@@ -30,15 +31,20 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        return view('employee.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreEmployeeRequest $request)
     {
-        //
+        try {
+            Employee::create($request->validated());
+            return redirect()->route('pegawai.index');
+        } catch (\Exception $e) {
+            return back()->with('error', 'Gagal menambahkan data pegawai: ' . $e->getMessage());
+        }
     }
 
     /**
