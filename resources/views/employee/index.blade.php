@@ -12,7 +12,7 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
-                    <a class="btn btn-success ms-2" href="{{ route('pegawai.create') }}">Tambah Data</a>
+                    <a class="btn btn-success ms-2" href="{{ route('pegawai.create') }}">Tambah</a>
                 </div>
                 <div class="pt-4 table-responsive text-nowrap">
                     <table class="table table-bordered text-center">
@@ -61,7 +61,7 @@
                         @endforeach
                     </table>
                     <div class="mt-4 d-flex justify-content-end">
-                        {{-- {{ $employees->links() }} --}}
+                        {{ $employees->links() }}
                     </div>
                 </div>
             </div>
