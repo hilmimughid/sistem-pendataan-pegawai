@@ -24,7 +24,7 @@
         </ul>
     </div>
     <hr>
-    <a class="mx-3 py-2 mb-3 d-flex align-items-center gap-3 btn btn-danger" href="#">
+    <a class="mx-3 py-2 mb-3 d-flex align-items-center gap-3 btn btn-danger" href="{{ route('logout') }}">
         <i class="fa-solid fa-right-from-bracket"></i>
         <b>Logout</b>
     </a>

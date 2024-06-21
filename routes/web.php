@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AuthenticationController::class, 'index'])->name('/');
+Route::post('/login', [AuthenticationController::class, 'login'])->name('login');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-Route::resource('/pegawai', EmployeeController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('/pegawai', EmployeeController::class);
+    Route::get('/logout', [AuthenticationController::class, 'logout'])->name('logout');
+});
