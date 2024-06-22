@@ -27,15 +27,27 @@
                             <h4 class="text-center pb-3">Sistem Pendataan Pegawai</h4>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
-                                <div class="my-3">
-                                    <label for="username" class="form-label">Username</label>
-                                    <input type="text" name="username" class="form-control"
-                                        placeholder="Masukkan Username" required>
+                                <div class="form-group">
+                                    <div class="my-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" name="username"
+                                            class="form-control @error('username') error-input @enderror"
+                                            placeholder="Masukkan Username" value="{{ old('username') }}">
+                                        @error('username')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
                                 </div>
-                                <div class="my-3">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control"
-                                        placeholder="Masukkan Password" required>
+                                <div class="form-group">
+                                    <div class="my-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" name="password"
+                                            class="form-control @error('password') error-input @enderror"
+                                            placeholder="Masukkan Password" value="{{ old('password') }}">
+                                        @error('password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100 py-8 my-3 rounded-2">Login</button>
                             </form>

@@ -9,3 +9,7 @@
 .nav-link:hover {
     color: white;
 }
+
+.error-input {
+    border: 1px solid red;
+}
