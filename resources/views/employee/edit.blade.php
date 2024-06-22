@@ -54,8 +54,6 @@
                             <select class="form-select @error('jabatan') error-input @enderror" name="jabatan">
                                 <option value="Staff" {{ $employee->jabatan === 'Staff' ? 'selected' : '' }}>
                                     Staff</option>
-                                <option value="Supervisor" {{ $employee->jabatan === 'Supervisor' ? 'selected' : '' }}>
-                                    Supervisor</option>
                                 <option value="Manager" {{ $employee->jabatan === 'Manager' ? 'selected' : '' }}>
                                     Manager</option>
                                 <option value="Direktur" {{ $employee->jabatan === 'Direktur' ? 'selected' : '' }}>

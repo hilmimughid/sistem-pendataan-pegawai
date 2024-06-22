@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->enum('divisi', ['Produksi', 'Keuangan', 'Marketing', 'IT', 'HR']);
-            $table->enum('jabatan', ['Staff', 'Supervisor', 'Manager', 'Direktur']);
+            $table->enum('jabatan', ['Staff', 'Manager', 'Direktur']);
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
             $table->string('no_hp');
             $table->string('email');

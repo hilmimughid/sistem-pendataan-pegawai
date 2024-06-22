@@ -56,8 +56,6 @@
                                 <option selected>Pilih Jabatan</option>
                                 <option value="Staff" {{ old('jabatan') === 'Staff' ? 'selected' : '' }}>
                                     Staff</option>
-                                <option value="Supervisor" {{ old('jabatan') === 'Supervisor' ? 'selected' : '' }}>
-                                    Supervisor</option>
                                 <option value="Manager" {{ old('jabatan') === 'Manager' ? 'selected' : '' }}>
                                     Manager</option>
                                 <option value="Direktur" {{ old('jabatan') === 'Direktur' ? 'selected' : '' }}>
