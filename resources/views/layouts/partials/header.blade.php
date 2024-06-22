@@ -1,5 +1,5 @@
 {{-- Header --}}
-<b class="py-3 px-3 fs-5 text-white" href="#">Pendataan Pegawai</b>
+<b class="py-3 px-3 fs-5 text-white" href="#">Sistem Pendataan Pegawai</b>
 
 <ul class="navbar-nav flex-row d-lg-none">
     <li class="nav-item text-nowrap">

@@ -15,17 +15,17 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-3 mx-3 mb-3 btn btn-primary"
+                <a class="nav-link d-flex align-items-center gap-3 mx-3 mb-2 btn btn-primary"
                     href="{{ route('pegawai.index') }}">
                     <i class="fa-solid fa-users"></i>
                     <b>Data Pegawai</b>
                 </a>
             </li>
         </ul>
+        <hr>
+        <a class="mx-3 py-2 mb-3 d-flex align-items-center gap-3 btn btn-danger" href="{{ route('logout') }}">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <b>Logout</b>
+        </a>
     </div>
-    <hr>
-    <a class="mx-3 py-2 mb-3 d-flex align-items-center gap-3 btn btn-danger" href="{{ route('logout') }}">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <b>Logout</b>
-    </a>
 </div>
