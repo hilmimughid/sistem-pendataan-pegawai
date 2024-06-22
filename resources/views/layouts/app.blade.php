@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('libraries/fontawesome/css/all.css') }}" />
 </head>
 
-<body>
+<body class="bg-light-subtle">
     {{-- Header --}}
     <header class="navbar sticky-top bg-dark flex-nowrap p-0">
         @include('layouts.partials.header')
@@ -40,6 +40,7 @@
         </div>
     </div>
     <script src="{{ asset('libraries/bootstrap/js/bootstrap.bundle.js') }}"></script>
+    @yield('scripts')
 </body>
 
 </html>
