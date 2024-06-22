@@ -31,4 +31,23 @@ class StoreEmployeeRequest extends FormRequest
             'alamat' => 'required|string|max:254',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'nama.required' => 'Nama wajib diisi',
+            'nama.max' => 'Nama maksimal 254 karakter',
+            'divisi.in' => 'Divisi wajib diisi',
+            'jabatan.in' => 'Jabatan wajib diisi',
+            'jenis_kelamin.in' => 'Jenis kelamin wajib diisi',
+            'no_hp.required' => 'Nomor handphone wajib diisi',
+            'no_hp.regex' => 'Format nomor handphone tidak valid',
+            'no_hp.unique' => 'Nomor handphone sudah terdaftar',
+            'email.required' => 'Email wajib diisi',
+            'email.email' => 'Format email tidak valid',
+            'email.unique' => 'Email sudah terdaftar',
+            'alamat.required' => 'Alamat wajib diisi',
+            'alamat.max' => 'Alamat maksimal 254 karakter',
+        ];
+    }
 }

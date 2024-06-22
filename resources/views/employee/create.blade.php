@@ -10,58 +10,90 @@
                     <div class="row">
                         <div class="col mb-4">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama"
-                                required />
+                            <input type="text" name="nama" class="form-control @error('nama') error-input @enderror"
+                                placeholder="Masukkan Nama" value="{{ old('nama') }}" />
+                            @error('nama')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="col mb-4">
                             <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                            <select class="form-select" name="jenis_kelamin" required>
+                            <select class="form-select @error('jenis_kelamin') error-input @enderror" name="jenis_kelamin">
                                 <option selected>Pilih Jenis Kelamin</option>
-                                <option value="Laki-laki">Laki-laki</option>
-                                <option value="Perempuan">Perempuan</option>
+                                <option value="Laki-laki" {{ old('jenis_kelamin') === 'Laki-laki' ? 'selected' : '' }}>
+                                    Laki-laki</option>
+                                <option value="Perempuan" {{ old('jenis_kelamin') === 'Perempuan' ? 'selected' : '' }}>
+                                    Perempuan</option>
                             </select>
+                            @error('jenis_kelamin')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row">
                         <div class="col mb-4">
                             <label for="divisi" class="form-label">Divisi</label>
-                            <select class="form-select" name="divisi" required>
+                            <select class="form-select @error('divisi') error-input @enderror" name="divisi">
                                 <option selected>Pilih Divisi</option>
-                                <option value="Produksi">Produksi</option>
-                                <option value="Keuangan">Keuangan</option>
-                                <option value="Marketing">Marketing</option>
-                                <option value="IT">IT</option>
-                                <option value="HR">HR</option>
+                                <option value="Produksi" {{ old('divisi') === 'Produksi' ? 'selected' : '' }}>
+                                    Produksi</option>
+                                <option value="Keuangan" {{ old('divisi') === 'Keuangan' ? 'selected' : '' }}>
+                                    Keuangan</option>
+                                <option value="Marketing" {{ old('divisi') === 'Marketing' ? 'selected' : '' }}>
+                                    Marketing</option>
+                                <option value="IT" {{ old('divisi') === 'IT' ? 'selected' : '' }}>
+                                    IT</option>
+                                <option value="HR" {{ old('divisi') === 'HR' ? 'selected' : '' }}>
+                                    HR</option>
                             </select>
+                            @error('divisi')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="col mb-4">
                             <label for="jabatan" class="form-label">Jabatan</label>
-                            <select class="form-select" name="jabatan" required>
+                            <select class="form-select @error('jabatan') error-input @enderror" name="jabatan">
                                 <option selected>Pilih Jabatan</option>
-                                <option value="Staff">Staff</option>
-                                <option value="Supervisor">Supervisor</option>
-                                <option value="Manager">Manager</option>
-                                <option value="Direktur">Direktur</option>
+                                <option value="Staff" {{ old('jabatan') === 'Staff' ? 'selected' : '' }}>
+                                    Staff</option>
+                                <option value="Supervisor" {{ old('jabatan') === 'Supervisor' ? 'selected' : '' }}>
+                                    Supervisor</option>
+                                <option value="Manager" {{ old('jabatan') === 'Manager' ? 'selected' : '' }}>
+                                    Manager</option>
+                                <option value="Direktur" {{ old('jabatan') === 'Direktur' ? 'selected' : '' }}>
+                                    Direktur</option>
                             </select>
+                            @error('jabatan')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row">
                         <div class="col mb-4">
                             <label for="no_hp" class="form-label">No. HP</label>
-                            <input type="text" name="no_hp" class="form-control" placeholder="Masukkan No. HP"
-                                required />
+                            <input type="text" name="no_hp" class="form-control @error('no_hp') error-input @enderror"
+                                placeholder="Masukkan No. HP" value="{{ old('no_hp') }}" />
+                            @error('no_hp')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="col mb-4">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Masukkan Email"
-                                required />
+                            <input type="email" name="email" class="form-control @error('email') error-input @enderror"
+                                placeholder="Masukkan Email" value="{{ old('email') }}" />
+                            @error('email')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row">
                         <div class="col mb-3">
                             <label for="alamat" class="form-label">Alamat</label>
-                            <input type="text" name="alamat" class="form-control" placeholder="Masukkan Alamat"
-                                required />
+                            <input type="text" name="alamat" class="form-control @error('alamat') error-input @enderror"
+                                placeholder="Masukkan Alamat" value="{{ old('alamat') }}" />
+                            @error('alamat')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="text-end">
