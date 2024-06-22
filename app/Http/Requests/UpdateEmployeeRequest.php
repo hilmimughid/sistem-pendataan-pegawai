@@ -31,4 +31,21 @@ class UpdateEmployeeRequest extends FormRequest
             'alamat' => 'required|string|max:254',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'nama.required' => 'Nama tidak boleh dikosongi',
+            'nama.max' => 'Nama maksimal 254 karakter',
+            'divisi.in' => 'Divisi tidak boleh dikosongi',
+            'jabatan.in' => 'Jabatan tidak boleh dikosongi',
+            'jenis_kelamin.in' => 'Jenis kelamin tidak boleh dikosongi',
+            'no_hp.required' => 'Nomor handphone tidak boleh dikosongi',
+            'no_hp.regex' => 'Format nomor handphone tidak valid',
+            'email.required' => 'Email tidak boleh dikosongi',
+            'email.email' => 'Format email tidak valid',
+            'alamat.required' => 'Alamat tidak boleh dikosongi',
+            'alamat.max' => 'Alamat maksimal 254 karakter',
+        ];
+    }
 }
