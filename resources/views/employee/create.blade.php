@@ -11,7 +11,7 @@
                         <div class="col mb-4">
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" name="nama" class="form-control @error('nama') error-input @enderror"
-                                placeholder="Masukkan Nama" value="{{ old('nama') }}" />
+                                placeholder="Masukkan Nama" value="{{ old('nama') }}" maxlength="254" />
                             @error('nama')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -70,7 +70,7 @@
                         <div class="col mb-4">
                             <label for="no_hp" class="form-label">No. HP</label>
                             <input type="text" name="no_hp" class="form-control @error('no_hp') error-input @enderror"
-                                placeholder="Masukkan No. HP" value="{{ old('no_hp') }}" />
+                                placeholder="Masukkan No. HP" value="{{ old('no_hp') }}" maxlength="15" />
                             @error('no_hp')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -78,7 +78,7 @@
                         <div class="col mb-4">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" class="form-control @error('email') error-input @enderror"
-                                placeholder="Masukkan Email" value="{{ old('email') }}" />
+                                placeholder="Masukkan Email" value="{{ old('email') }}" maxlength="254" />
                             @error('email')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -88,7 +88,7 @@
                         <div class="col mb-3">
                             <label for="alamat" class="form-label">Alamat</label>
                             <input type="text" name="alamat" class="form-control @error('alamat') error-input @enderror"
-                                placeholder="Masukkan Alamat" value="{{ old('alamat') }}" />
+                                placeholder="Masukkan Alamat" value="{{ old('alamat') }}" maxlength="254" />
                             @error('alamat')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
