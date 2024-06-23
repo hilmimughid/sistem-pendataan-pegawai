@@ -33,12 +33,14 @@
         </div>
     </div>
 
-@section('scripts')
-    <script src="{{ $chartEmployeeGender->cdn() }}"></script>
-    <script src="{{ $chartEmployeeDivisions->cdn() }}"></script>
-    <script src="{{ $chartEmployeeDivisionsGender->cdn() }}"></script>
-    {{ $chartEmployeeGender->script() }}
-    {{ $chartEmployeeDivisions->script() }}
-    {{ $chartEmployeeDivisionsGender->script() }}
-@endsection
+    @push('scripts')
+        <script src="{{ $chartEmployeeGender->cdn() }}"></script>
+        {{ $chartEmployeeGender->script() }}
+
+        <script src="{{ $chartEmployeeDivisions->cdn() }}"></script>
+        {{ $chartEmployeeDivisions->script() }}
+
+        <script src="{{ $chartEmployeeDivisionsGender->cdn() }}"></script>
+        {{ $chartEmployeeDivisionsGender->script() }}
+    @endpush
 @endsection
