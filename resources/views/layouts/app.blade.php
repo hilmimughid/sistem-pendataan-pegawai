@@ -39,7 +39,10 @@
             </main>
         </div>
     </div>
+
+    {{-- Boostrapt JS --}}
     <script src="{{ asset('libraries/bootstrap/js/bootstrap.bundle.js') }}"></script>
+
     @yield('scripts')
 </body>
 
