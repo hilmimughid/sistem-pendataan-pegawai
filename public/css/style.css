@@ -1,5 +1,9 @@
+.vh-login {
+    height: calc(100vh - 24px);
+}
+
 .vh-sidebar {
-    height: calc(100vh - 154px);
+    height: calc(100vh - 64px);
 }
 
 .nav-link {

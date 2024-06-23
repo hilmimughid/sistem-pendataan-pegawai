@@ -12,10 +12,16 @@
 
     {{-- Bootstrap CSS --}}
     <link rel="stylesheet" href="{{ asset('libraries/bootstrap/css/bootstrap.css') }}" />
+
+    {{-- Custom CSS --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+
+    {{-- Font Awesome --}}
+    <link rel="stylesheet" href="{{ asset('libraries/fontawesome/css/all.css') }}" />
 </head>
 
 <body class="bg-light-subtle">
-    <div class="position-relative min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="position-relative vh-login d-flex align-items-center justify-content-center">
         <div class="d-flex align-items-center justify-content-center w-100">
             <div class="row justify-content-center w-100">
                 <div class="col-xl-3">
@@ -57,6 +63,13 @@
             </div>
         </div>
     </div>
+
+    {{-- Footer --}}
+    <footer>
+        <div class="text-center">
+            <span class="text-dark-emphasis"><i class="fa-regular fa-copyright"></i> by Hilmi Mughid 2024</span>
+        </div>
+    </footer>
 
     {{-- Bootstrap JS --}}
     <script src="{{ asset('libraries/bootstrap/js/bootstrap.bundle.js') }}"></script>

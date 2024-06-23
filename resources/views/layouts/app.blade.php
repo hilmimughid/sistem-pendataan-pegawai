@@ -14,6 +14,8 @@
 
     {{-- Bootstrap CSS --}}
     <link rel="stylesheet" href="{{ asset('libraries/bootstrap/css/bootstrap.css') }}" />
+
+    {{-- Custom CSS --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
     {{-- Fontawesome --}}
@@ -36,9 +38,19 @@
             {{-- Main Content --}}
             <main class="col">
                 @yield('content')
+
+                {{-- Footer --}}
+                <footer class="mt-5">
+                    <div class="text-center">
+                        <span class="text-dark-emphasis"><i class="fa-regular fa-copyright"></i> by Hilmi Mughid
+                            2024</span>
+                    </div>
+                </footer>
             </main>
         </div>
     </div>
+
+
 
     {{-- Boostrapt JS --}}
     <script src="{{ asset('libraries/bootstrap/js/bootstrap.bundle.js') }}"></script>
