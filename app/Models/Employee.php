@@ -9,5 +9,6 @@ class Employee extends Model
 {
     use HasFactory;
 
+    protected $table = 'employees';
     protected $guarded = ['id'];
 }
