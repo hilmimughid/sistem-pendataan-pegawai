@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="{{ asset('libraries/bootstrap/css/bootstrap.css') }}" />
 </head>
 
-<body>
+<body class="bg-light-subtle">
     <div class="position-relative min-vh-100 d-flex align-items-center justify-content-center">
         <div class="d-flex align-items-center justify-content-center w-100">
             <div class="row justify-content-center w-100">
                 <div class="col-xl-3">
-                    <div class="card">
+                    <div class="card border-light-subtle">
                         <div class="card-body">
                             <div class="d-flex align-items-center justify-content-center my-3">
                                 <img src="{{ asset('images/favicon.png') }}" class="w-25" alt="Logo">
