@@ -43,7 +43,8 @@
     {{-- Boostrapt JS --}}
     <script src="{{ asset('libraries/bootstrap/js/bootstrap.bundle.js') }}"></script>
 
-    @yield('scripts')
+    {{-- Custom JS --}}
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>
